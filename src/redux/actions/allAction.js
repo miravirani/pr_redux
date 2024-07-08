@@ -18,3 +18,8 @@ export const SIGN_UP = "signup auth"
 export const REQUEST_START = "request_start" 
 export const REQUEST_SUCCESS = "request_success"
 export const REQUEST_DETAIL_SUCCESS = "request_detail_success"
+
+// imgbb action
+// export const UPLOAD_IMAGE_REQUEST = 'upload_image_request'
+export const UPLOAD_IMAGE = 'upload_image_success'
+// export const UPLOAD_IMAGE_FAILURE = 'upload_image_failure'

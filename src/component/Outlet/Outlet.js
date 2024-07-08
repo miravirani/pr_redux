@@ -1,13 +1,15 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
-import Header from "../Header/Header"
+import ImgbbHeader from "../Header/ImgbbHeader"
 
 
 function Outlets(){
     return(
         <>
-            <Header/>
-            <Outlet />
+            {/* <Header/>
+            <Outlet /> */}
+            <ImgbbHeader/>
+            <Outlet/>
         </>
     )
 }
