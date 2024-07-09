@@ -1,30 +1,51 @@
+// import { UPLOAD_IMAGE } from "../actions/allAction";
+
 import { UPLOAD_IMAGE } from "../actions/allAction";
 
 
+// const initialState = {
+//     uploadFile: []
+// }
+
+// const ImgbbReducers = (state = initialState, action) => {
+//     switch (action.type) {
+
+
+//         case UPLOAD_IMAGE: {
+//             return {
+//                 ...state,
+//                 uploadFile: [
+//                     ...state.uploadFile,
+//                     {
+//                         name: action.data.imageUrl
+//                     }
+//                 ]
+//             }
+//         }
+
+//         default:
+//             return state
+
+//     }
+// }
+
+// export default ImgbbReducers
+
+// redux/reducers/ImgbbReducer.js
 const initialState = {
-    uploadFile: []
-}
+    imageUrl: null,
+};
 
-const ImgbbReducers = (state = initialState, action) => {
+const ImgbbReducer = (state = initialState, action) => {
     switch (action.type) {
-
-
-        case UPLOAD_IMAGE: {
+        case UPLOAD_IMAGE:
             return {
                 ...state,
-                uploadFile: [
-                    ...state.uploadFile,
-                    {
-                        name: action.data.imageUrl
-                    }
-                ]
+                imageUrl: action.data,
             }
-        }
-
         default:
-            return state
-
+            return state;
     }
-}
+};
 
-export default ImgbbReducers
+export default ImgbbReducer;

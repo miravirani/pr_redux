@@ -1,13 +1,13 @@
-import {UPLOAD_IMAGE } from "./allAction";
+import { UPLOAD_IMAGE } from "./allAction";
 
 
 
-export const uploadImageSuccess = (imageUrl) => ({
-    type: UPLOAD_IMAGE,
-    data: {
-        imageUrl
+export const uploadImageSuccess = (imageUrl) => {
+    return {
+        type: UPLOAD_IMAGE,
+        data: imageUrl
     }
-})
+}
 
 // export const uploadImageFailure = (error) => ({
 //     type: UPLOAD_IMAGE_FAILURE,

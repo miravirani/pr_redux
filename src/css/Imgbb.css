@@ -39,13 +39,72 @@
     font-weight: 500;
     border-radius: 5px;
 }
-.h3{
+.main h3{
     font-size: 45px;
     padding: 10px 0;
 }
-.p{
+.main p{
     font-size: 20px;
     width: 60%;
     margin: auto;
     padding: 15px 0;
+}
+
+/* ImgbbView commponent */
+
+.view{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.icon{
+    font-size: 100px;
+    color: #2a80b9;
+}
+
+.view p{
+    font-size: 22px;
+    width: 35%;
+    margin: auto;
+    padding: 5px 0;
+}
+
+span{
+    font-size: 17px;
+    padding: 5px 0;
+   
+}
+.span{
+    color: #2a80b9;
+}
+.span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.view h3 {
+    margin:  200px 0 8px;
+    padding-right: 90px;
+}
+.text-input, input[type="text"]:not(.text-input), textarea {
+    padding: 7px 10px;
+    font-size: 13px;
+    font-size: 0.875rem;
+    width: 20%;
+    height: 36px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #eee;
+    background: #eee;
+    margin-top: -20px;
+}
+.uploadbtn{
+    background-color: #2a80b9;
+    letter-spacing: 0.1em;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
