@@ -1,11 +1,11 @@
 import { UPLOAD_IMAGE } from "./allAction";
 
-
-
 export const uploadImageSuccess = (imageUrl) => {
     return {
         type: UPLOAD_IMAGE,
-        data: imageUrl
+        data: {
+            imageUrl
+        }
     }
 }
 
@@ -16,3 +16,4 @@ export const uploadImageSuccess = (imageUrl) => {
 // export const uploadImageRequest = () => ({
 //     type : UPLOAD_IMAGE_FAILURE
 // })
+// redux/actions/ImgbbAction.js

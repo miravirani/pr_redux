@@ -3,11 +3,18 @@ import "../../css/Imgbb.css"
 import imgbblogo from "../../Assest/imgbblogo.png"
 import { uploadImageSuccess } from "../../redux/actions/ImgbbAction"
 import { connect } from "react-redux"
+import ImgbbView from "../ImgbbView"
 
 
 function ImgbbHeader({ uploadFile }) {
-    const [selecteFile, setSelecteFile] = useState(null)
+    const [selectedFile, setSelectedFile] = useState(null)
+    const [uploadImgbb, setUploadImgbb] = useState(false)
     const fileInputRef = useRef(null)
+
+    if (uploadImgbb) {
+
+        return <ImgbbView selectedFile={selectedFile} />;
+    }
 
     return (
         <>
@@ -25,7 +32,9 @@ function ImgbbHeader({ uploadFile }) {
                         ref={fileInputRef}
                         onChange={(e) => {
                             e.preventDefault()
-                            setSelecteFile(e.target.value)
+                            setSelectedFile(e.target.files[0])
+                            uploadFile(e.target.files[0].name)
+                            setUploadImgbb(true)
                         }}
                         style={{ display: 'none' }}
                     />
@@ -35,13 +44,11 @@ function ImgbbHeader({ uploadFile }) {
                             e.preventDefault()
                             fileInputRef.current.click()
 
-                            if (selecteFile) {
-                                uploadFile(selecteFile.name)
-                            }
                         }
                         }>
                         UPLOAD
                     </button>
+
                 </div>
 
             </div>
@@ -55,4 +62,4 @@ const mapStateToProps = (state) => ({})
 const mapStateToDispatch = (dispatch) => ({
     uploadFile: (imageUrl) => (dispatch(uploadImageSuccess(imageUrl)))
 })
-export default connect(mapStateToProps, mapStateToDispatch)(ImgbbHeader);
+export default connect(mapStateToProps, mapStateToDispatch)(ImgbbHeader)

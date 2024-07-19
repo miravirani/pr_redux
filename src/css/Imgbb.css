@@ -1,18 +1,21 @@
 /* ImgbbHeader css */
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .containers {
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
 }
+
 .img {
     padding-top: 5px;
 }
+
 .imgbtn {
     background-color: #2a80b9;
     border: none;
@@ -25,11 +28,12 @@
 
 /* ImgbbCreate component */
 
-.main{
+.main {
     text-align: center;
     margin-top: 100px;
 }
-.startbtn{
+
+.startbtn {
     background-color: #2a80b9;
     padding: 10px 15px;
     border: none;
@@ -39,11 +43,13 @@
     font-weight: 500;
     border-radius: 5px;
 }
-.main h3{
+
+.main h3 {
     font-size: 45px;
     padding: 10px 0;
 }
-.main p{
+
+.main p {
     font-size: 20px;
     width: 60%;
     margin: auto;
@@ -52,52 +58,57 @@
 
 /* ImgbbView commponent */
 
-.view{
+.view {
     text-align: center;
     margin-top: 60px;
 }
 
-.icon{
+.icon {
     font-size: 100px;
     color: #2a80b9;
 }
 
-.view p{
+.view p {
     font-size: 22px;
     width: 35%;
     margin: auto;
     padding: 5px 0;
 }
 
-span{
+.view div span {
     font-size: 17px;
-    padding: 5px 0;
-   
+    padding: 5px 0 10px;
+    margin-bottom: 10px;
 }
-.span{
+
+.span {
     color: #2a80b9;
 }
-.span:hover{
+
+.span:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
 .view h3 {
-    margin:  200px 0 8px;
-    padding-right: 90px;
+    margin: 0 0 8px;
+    /* padding-right: 90px; */
 }
-.text-input, input[type="text"]:not(.text-input), textarea {
+
+.text-input {
     padding: 7px 10px;
     font-size: 13px;
     font-size: 0.875rem;
-    width: 20%;
-    height: 36px;
+    width: 24%;
+    height: 39px;
     border-radius: 3px;
     display: inline-block;
     border: 1px solid #eee;
     background: #eee;
     margin-top: -20px;
 }
-.uploadbtn{
+
+.uploadbtn {
     background-color: #2a80b9;
     letter-spacing: 0.1em;
     border: none;
@@ -106,5 +117,15 @@ span{
     font-weight: 500;
     margin-top: 15px;
     padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.urlimg {
+    width: 190px;
+    height: 190px;
+    margin: auto;
+    margin: 20px;
+    border: 1.5px solid rgb(99, 97, 97);
+    padding: 6px;
     border-radius: 5px;
 }
