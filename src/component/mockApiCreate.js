@@ -6,28 +6,29 @@ import { useNavigate } from "react-router-dom"
 import { requestSuccessAction, requestDetailSuccessAction } from "../redux/actions/apiAction"
 
 const MockApiCreate = ({ dataForView, dataSuccess, singleDataForView }) => {
-
     const navigator = useNavigate()
 
-    function callingApi() {
-        try {
-            const data = axios.get("https://6620acad3bf790e070b04045.mockapi.io/user/user")
-                .then((data) => {
-                    dataSuccess(data.data)
-                }).catch(() => {
-                    dataSuccess([])
-                })
-        } catch (error) {
-            console.log("error occured", error);
-            dataSuccess([])
-        }
-    }
+    // function callingApi() {
+    //     try {
+    //         const data = axios.get("https://6620acad3bf790e070b04045.mockapi.io/user/user")
+    //             .then((data) => {
+    //                 dataSuccess(data.data)
+    //             }).catch(() => {
+    //                 dataSuccess([])
+    //             })
+    //     } catch (error) {
+    //         console.log("error occured", error);
+    //         dataSuccess([])
+    //     }
+    // }
 
     useEffect(() => {
-        callingApi()
-    }, [])
 
-    console.log(dataForView);
+        dataSuccess()
+    }, [dataSuccess])
+
+    // console.log(dataForView)
+
     return (
         <>
             <div style={{ paddingTop: "8vh" }}>

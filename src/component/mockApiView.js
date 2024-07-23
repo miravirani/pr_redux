@@ -22,4 +22,4 @@ const mapStateToProps = (state) => ({
 const mapStateToDispatch = (dispatch) => ({
 
 })
-export default connect(mapStateToProps, mapStateToDispatch) (MockApiView)
+export default connect(mapStateToProps, mapStateToDispatch)(MockApiView)
