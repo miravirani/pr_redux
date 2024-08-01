@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import MockApiCreate from './component/mockApiCreate';
-import MockApiView from './component/mockApiView';
 import Navigation from './component/Navigations/Navigation';
+import { socket, socketContext } from './Context/socket';
+
+
 
 
 function App() {
@@ -12,10 +12,13 @@ function App() {
     <>
 
       <Provider store={store}>
-        <Navigation />
+        <socketContext.Provider value={socket}>
+          <Navigation />
+        </socketContext.Provider>
       </Provider>
+
     </>
-  );
+  )
 }
 
 export default App;

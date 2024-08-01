@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import axios from "axios"
 import { connect } from "react-redux"
 import "../css/mockApi.css"
 import { useNavigate } from "react-router-dom"

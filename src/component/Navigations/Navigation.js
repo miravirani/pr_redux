@@ -13,7 +13,7 @@ function Navigation() {
             <Routes>
                 <Route path="" element = {<Outlets /> }>
                     {/* <Route path="/" element= {<ImgbbCreate/>}/>
-                    <Route path="/view" element={<ImgbbView/>}/> */}
+                    <Route index path="/view" element={<ImgbbView/>}/> */}
                     <Route path="/mock" element={<MockApiCreate/>} ></Route>
                     <Route path="/api-data" element={<MockApiView/>}></Route>
                     <Route path="/todo" element= {<TodoList />}></Route>
