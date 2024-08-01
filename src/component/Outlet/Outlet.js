@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { Outlet } from "react-router-dom"
 import ImgbbHeader from "../Header/ImgbbHeader"
-import Header from "../Header/Header.js"
+// import Header from "../Header/Header.js"
 import { socket, socketContext } from "../../Context/socket.js"
 
 
@@ -23,10 +23,10 @@ function Outlets() {
 
     return (
         <>
-            <Header />
-            <Outlet />
-            {/* <ImgbbHeader/>
-            <Outlet/> */}
+            {/* <Header />
+            <Outlet /> */}
+            <ImgbbHeader/>
+            <Outlet/>
         </>
     )
 }
