@@ -25,6 +25,18 @@
     border-radius: 5px;
     font-size: 18px;
 }
+@media (max-width: 450px){
+    .containers{
+        width: 100%;
+        height: auto;
+    }
+    .logo{
+        padding: 10px 0;
+    }
+    .img{
+        padding-top: 10px;
+    }
+}
 
 /* ImgbbCreate component */
 
@@ -54,6 +66,18 @@
     width: 60%;
     margin: auto;
     padding: 15px 0;
+}
+
+@media (max-width: 450px){
+    .main{
+        width: 100%;
+        height: auto;
+    }
+    .main p{
+        width: 85%;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 /* ImgbbView commponent */
@@ -95,6 +119,16 @@
     /* padding-right: 90px; */
 }
 
+.urlimg {
+    width: 190px;
+    height: 190px;
+    margin: auto;
+    margin: 20px;
+    border: 1.5px solid rgb(99, 97, 97);
+    padding: 6px;
+    border-radius: 5px;
+}
+
 .text-input {
     padding: 7px 10px;
     font-size: 13px;
@@ -120,12 +154,158 @@
     border-radius: 5px;
 }
 
-.urlimg {
-    width: 190px;
-    height: 190px;
-    margin: auto;
-    margin: 20px;
-    border: 1.5px solid rgb(99, 97, 97);
-    padding: 6px;
-    border-radius: 5px;
+@media (max-width: 450px){
+    .view{
+        width: 100%;
+        height: auto;
+    }
+    .view p{
+        width: 85%;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .view h3{
+        padding-right: 177px;
+        padding-bottom: 10px;
+    }
+    .view .text-input{
+        width: 80%;
+        padding-left: -50px;
+
+    }
 }
+
+/* imgbbComplete component */
+.upload-complete-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    text-align: center;
+    color: #333;
+}
+
+.upload-complete {
+    width: 52%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upload-complete .checkmark {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons{
+    color: white;
+    font-size: 35px;
+}
+
+.embed-codes p{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: -375px;
+}
+.upload-complete .embed-codes textarea {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.text-input1{
+    padding: 7px 10px;
+    font-size: 13px;
+    font-size: 0.875rem;
+    width: 40%;
+    height: 39px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #eee;
+    background: #eee;
+    margin-left: -245px;
+    margin-top: 8px;
+}
+.embed-codes .textarea{
+    margin-left: 67px;
+    background: #eee;
+    width: auto;
+}
+
+@media (max-width: 450px){
+    .upload-complete-container {
+        margin-top: 0px;
+    }
+    .upload-complete{
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+    }
+    .upload-complete p{
+        padding: 15px;
+    }
+    .embed-codes p{
+        padding-left: 150px;
+    }
+    .text-input1{
+        margin-left: -27px;
+        width: 80%;
+    }
+    .embed-codes .textarea{
+        width: 60%;
+        margin-left: 20px;
+    }
+
+}
+/* Ensure this is included in your CSS file (e.g., headerImgBb.css or uploadingProcess.css) */
+/* .image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 17%; 
+    margin: auto;
+    border: 1px solid gray;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px dotted #000; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+} */
+
+
+

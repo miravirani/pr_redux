@@ -19,7 +19,7 @@ function ImgbbHeader({ uploadFile }) {
     return (
         <>
             <div className="containers">
-                <div>
+                <div className="logo">
                     <h2>Logo</h2>
                 </div>
 
