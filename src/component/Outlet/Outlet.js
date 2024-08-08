@@ -1,32 +1,31 @@
 import React, { useContext, useEffect } from "react"
 import { Outlet } from "react-router-dom"
-import ImgbbHeader from "../Header/ImgbbHeader"
-// import Header from "../Header/Header.js"
-import { socket, socketContext } from "../../Context/socket.js"
-
-
+import ChatHeader from "../Header/ChatHeader.js"
+import UserList from "../UserList.js"
+import ChatScreen from "../ChatScreen.js"
+import { socket } from "../../Context/socket.js"
 
 function Outlets() {
 
-    let myContextApi = useContext(socketContext)
-    console.log("socket connect  ==", myContextApi)
+    // let myContextApi = useContext(socketContext)
+    // console.log("socket connect  ==", myContextApi)
 
-    useEffect(() => {
-        socket.emit("reduxconnected", {
-            message: "hello word"
-        })
-    }, [])
+    // useEffect(() => {
+    //     socket.emit("reduxconnected", {
+    //         message: "hello word"
+    //     })
+    // }, [])
+   
 
-    // socket.emit("reduxconnected", {
-    //     message: "hello word"
-    // })
 
     return (
         <>
-            {/* <Header />
-            <Outlet /> */}
-            <ImgbbHeader/>
-            <Outlet/>
+            <div style={{display: "flex", height: "100vh"}}>
+                {/* <ChatHeader />
+                <UserList />
+                <ChatScreen /> */}
+                <Outlet />
+            </div>
         </>
     )
 }

@@ -1,0 +1,46 @@
+.user-list {
+    width: 30%;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    background-color: #f0f0f0;
+}
+
+.user-list input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.user-list button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #075e54;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.div2:hover {
+    background-color: #eee;
+}
+
+.div2 i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.div2 .p2 {
+    font-size: 18px;
+}

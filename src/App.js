@@ -4,21 +4,20 @@ import store from './redux/store';
 import Navigation from './component/Navigations/Navigation';
 import { socket, socketContext } from './Context/socket';
 
-
-
-
 function App() {
-  return (
-    <>
+    return (
+        <>
 
-      <Provider store={store}>
-        <socketContext.Provider value={socket}>
-          <Navigation />
-        </socketContext.Provider>
-      </Provider>
+            <Provider store={store}>
+                <socketContext.Provider value={socket}>
+                    <Navigation />
+                </socketContext.Provider>
+            </Provider>
 
-    </>
-  )
+        </>
+    )
 }
 
 export default App;
+
+
