@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { socketContext } from '../Context/socket';
+import React, { useContext, useState, useEffect } from 'react'
+import { socketContext } from '../Context/socket'
 import "../css/UserList.css"
 
 function UserList() {
-    const socket = useContext(socketContext);
-    const [search, setSearch] = useState('');
-    const [users, setUsers] = useState([]);
-    const [userData, setUserData] = useState(null);
+    const socket = useContext(socketContext)
+    const [search, setSearch] = useState('')
+    const [users, setUsers] = useState([])
+    const [userData, setUserData] = useState(null)
 
     useEffect(() => {
         socket.on('searched_value', (doc) => {
@@ -22,30 +22,30 @@ function UserList() {
             id1: localStorage.getItem('userID')
         });
 
-    }, [socket]);
+    }, [socket])
 
     const userSearch = () => {
-        socket.emit('get_users', { search });
-    };
+        socket.emit('get_users', { search })
+    }
 
     const selectUser = async (userID) => {
-        localStorage.setItem('receiverID', userID);
+        localStorage.setItem('receiverID', userID)
 
-        const personalUserDetails = userData.filter(user => user.userID === userID);
-        console.log('personal user details', personalUserDetails);
+        const personalUserDetails = userData.filter(user => user.userID === userID)
+        console.log('personal user details', personalUserDetails)
 
-        document.getElementById('chatScreenUserName').innerText = personalUserDetails[0]?.name ?? '';
+        document.getElementById('chatScreenUserName').innerText = personalUserDetails[0]?.name ?? ''
 
-        await allChatLoading();
-    };
+        await allChatLoading()
+    }
 
     const allChatLoading = () => {
-        console.log("all chat is loading");
+        console.log("all chat is loading")
         socket.emit("get_all_chat", {
             senderID: localStorage.getItem("userID"),
             receiverID: localStorage.getItem("receiverID")
-        });
-    };
+        })
+    }
 
     return (
         <div className="user-list">
@@ -78,7 +78,7 @@ function UserList() {
             </div>
 
         </div>
-    );
+    )
 }
 
-export default UserList;
+export default UserList

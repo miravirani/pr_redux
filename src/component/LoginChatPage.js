@@ -1,21 +1,20 @@
-// src/components/CheckUser.js
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react'
+import axios from 'axios'
 
 const LoginChatPage = () => {
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState('')
 
     const checkUserApi = async () => {
         try {
-            const response = await axios.get(`http://localhost:7000/user/check/${email}`);
+            const response = await axios.get(`http://localhost:7000/user/check/${email}`)
             if (response.data.error) {
-                console.error('Error:', response.data.error);
+                console.error('Error:', response.data.error)
             } else {
-                localStorage.setItem('userID', response.data.userDetails.userID);
-                window.location.replace('/chat');
+                localStorage.setItem('userID', response.data.userDetails.userID)
+                window.location.replace('/chat')
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error:', error)
         }
     };
 
@@ -29,7 +28,7 @@ const LoginChatPage = () => {
             />
             <button onClick={checkUserApi}>Check User</button>
         </div>
-    );
-};
+    )
+}
 
-export default  LoginChatPage;
+export default  LoginChatPage
