@@ -1,8 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import { Outlet } from "react-router-dom"
-import ChatHeader from "../Header/ChatHeader.js"
-import UserList from "../UserList.js"
-import ChatScreen from "../ChatScreen.js"
+import Header from '../Header/Header'
 import { socket } from "../../Context/socket.js"
 
 function Outlets() {
@@ -15,17 +13,11 @@ function Outlets() {
     //         message: "hello word"
     //     })
     // }, [])
-   
-
 
     return (
         <>
-            <div style={{display: "flex", height: "100vh"}}>
-                {/* <ChatHeader />
-                <UserList />
-                <ChatScreen /> */}
-                <Outlet />
-            </div>
+            <Header />
+            <Outlet />
         </>
     )
 }

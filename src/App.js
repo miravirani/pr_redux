@@ -7,17 +7,14 @@ import { socket, socketContext } from './Context/socket';
 function App() {
     return (
         <>
-
             <Provider store={store}>
                 <socketContext.Provider value={socket}>
                     <Navigation />
                 </socketContext.Provider>
             </Provider>
-
         </>
     )
 }
-
 export default App;
 
 
